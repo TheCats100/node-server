@@ -53,7 +53,7 @@ app.post('/api/movies', (req, res) => {
         if (err) {
             // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
             console.log(err);
-            res.status(500).send("Erreur lors de la sauvegarde d'un employé");
+            res.status(500).send("Erreur lors de la sauvegarde d'un film");
         } else {
             // Si tout s'est bien passé, on envoie un statut "ok".
             res.sendStatus(200);
