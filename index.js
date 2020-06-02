@@ -16,7 +16,7 @@ app.get('/api/movies/:id', (request, response) => {
     response.json({ id })
   });
 
-app.get('/api/employee', (request, response) => {
+app.get('/api/employee/', (request, response) => {
     const  { name }  = request.query;
     if (name) {
     response.status(404).send(`Impossible de récupérer l'employé ${name}`);
