@@ -11,9 +11,9 @@ app.use(express.urlencoded({
 }));
 
 
-// écoute de l'url "/api/employees"
+// écoute de l'url "/api/movies"
 app.get('/api/movies', (req, res) => {
-    // connection à la base de données, et sélection des employés
+    // connection à la base de données, et sélection des films
     connection.query('SELECT * from movie', (err, results) => {
         if (err) {
             // Si une erreur est survenue, alors on informe l'utilisateur de l'erreur
