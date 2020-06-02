@@ -22,8 +22,12 @@ app.get('/api/employee', (request, response) => {
 });
 
 app.get('/api/employee', (request, response) => {
-    //route légèrement modifiée pour éviter le conflit
-    response.sendStatus(304)
+    const  { name }  = request.query;
+    if (name) {
+    response.status(404).send(`Impossible de récupérer l'employé ${name}`);
+    } else {
+      response.sendStatus(304)
+    }
 });
 
 app.listen(port, (err) => {
